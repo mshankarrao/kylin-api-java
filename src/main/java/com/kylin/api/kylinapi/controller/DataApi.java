@@ -42,8 +42,8 @@ public class DataApi {
         for (String pair : pairs) {
 
             finalData.put("Coinbase", coinbaseAdapter.getData(pair));
-            finalData.put("CoinGecko", coingeckoAdapter.getData(pair));
-            finalData.put("Binance", binanceAdapter.getData(pair));
+            //finalData.put("CoinGecko", coingeckoAdapter.getData(pair));
+            //finalData.put("Binance", binanceAdapter.getData(pair));
             finalData.put("Kraken", krakenAdapter.getData(pair));
             finalData.put("Bitfinix", bitfinixAdapter.getData(pair));
             finalData.put("Uniswap-v2", uniswapAdapter.getData(pair));

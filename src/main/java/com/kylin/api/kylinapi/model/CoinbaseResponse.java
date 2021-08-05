@@ -7,6 +7,15 @@ public class CoinbaseResponse extends SourceResponse {
     private Integer trade_id;
     private String size;
     private String bid;
+    private String price;
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
 
     private String ask;
 

@@ -18,6 +18,7 @@ public class CryptocompareAdapter {
                 String.class);
         SourceResponse sourceResponse = new SourceResponse();
         sourceResponse.setActualPrice(value.split(":")[1].replaceAll("}", ""));
+        sourceResponse.setTradingPair(pair);
         return sourceResponse;
     }
 

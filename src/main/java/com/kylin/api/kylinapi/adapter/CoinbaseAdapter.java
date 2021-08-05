@@ -16,9 +16,10 @@ public class CoinbaseAdapter {
         String pairs[] = pair.split("_");
         String url = String.format("https://api.pro.coinbase.com/products/%s-%s/ticker", pairs[0].toUpperCase(),
                 pairs[1].toUpperCase());
-        SourceResponse value = restTemplate.getForObject(url, CoinbaseResponse.class);
-        value.setTradingPair(pair);
-        value.setSource("Coinbase");
-        return value;
+        CoinbaseResponse value = restTemplate.getForObject(url, CoinbaseResponse.class);
+        SourceResponse sourceResponse = new SourceResponse();
+        sourceResponse.setActualPrice(value.getPrice());
+        sourceResponse.setTradingPair(pair);
+        return sourceResponse;
     }
 }

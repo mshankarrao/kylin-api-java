@@ -13,10 +13,10 @@ public class BinanceAdapter {
     private RestTemplate restTemplate;
 
     public SourceResponse getData(String pair) {
-        SourceResponse value = restTemplate.getForObject("https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDC",
+        SourceResponse sourceResponse = restTemplate.getForObject("https://api.binance.com/api/v3/ticker/price?symbol=BTCUSDC",
                 SourceResponse.class);
-
-        return value;
+         
+        return sourceResponse;
     }
 
 }

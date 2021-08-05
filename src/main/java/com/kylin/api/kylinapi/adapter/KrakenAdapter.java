@@ -1,6 +1,5 @@
 package com.kylin.api.kylinapi.adapter;
 
-import com.kylin.api.kylinapi.model.CoingeckoResponse;
 import com.kylin.api.kylinapi.model.CryptoWatchResponse;
 import com.kylin.api.kylinapi.model.SourceResponse;
 
@@ -20,6 +19,7 @@ public class KrakenAdapter {
 
         SourceResponse sourceResponse = new SourceResponse();
         sourceResponse.setActualPrice(value.getResult().getPrice());
+        sourceResponse.setTradingPair(pair);
         return sourceResponse;
     }
 

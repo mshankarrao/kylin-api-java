@@ -20,6 +20,7 @@ public class UniswapAdapter {
 
         SourceResponse sourceResponse = new SourceResponse();
         sourceResponse.setActualPrice(value.getResult().getPrice());
+        sourceResponse.setTradingPair(pair);
         return sourceResponse;
     }
 }
